@@ -1,4 +1,4 @@
-package com.littlechef.bookmarkshttpservice;
+package com.littlechef.bookmarks.httpservice;
 
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
