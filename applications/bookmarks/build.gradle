@@ -1,0 +1,25 @@
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:1.2.2.RELEASE")
+    }
+}
+
+apply plugin: 'spring-boot'
+apply plugin: 'java'
+
+jar {
+    baseName = 'bookmarks'
+    version = '0.0.1'
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile "org.springframework.boot:spring-boot-starter-web:1.2.2.RELEASE"
+    compile project(":components/bookmarks-http-service")
+}

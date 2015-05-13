@@ -1,0 +1,15 @@
+rootProject.name = 'littlechef'
+
+include "applications/bookmarks"
+include "applications/littlechef-web-ui"
+include "applications/recipes"
+include "applications/search"
+include "applications/shopping-list"
+
+include "components/bookmarks-http-service"
+include "components/domain"
+include "components/elastic-search-connector"
+include "components/image-storage"
+include "components/recipes-http-service"
+include "components/search-http-service"
+include "components/shopping-list-http-service"

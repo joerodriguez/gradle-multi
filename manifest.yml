@@ -1,0 +1,27 @@
+---
+applications:
+- name: bookmarks
+  memory: 1G
+  instances: 2
+  path: ./applications/bookmarks/build/libs/bookmarks-0.0.1.jar
+  services:
+  - postgres-bookmarks
+- name: recipes
+  memory: 1G
+  instances: 2
+  path: ./applications/recipes/build/libs/recipes-0.0.1.jar
+  services:
+  - postgres-recipes
+- name: search
+  memory: 1G
+  instances: 2
+  path: ./applications/search/build/libs/search-0.0.1.jar
+  services:
+  - elasticsearch-recipes
+- name: web-ui
+  memory: 1G
+  instances: 2
+  path: ./applications/littlechef-web-ui/dist
+  buildpack: static_buildpack
+  services:
+  - elasticsearch-recipes
